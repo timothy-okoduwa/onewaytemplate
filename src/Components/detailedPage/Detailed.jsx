@@ -10,6 +10,7 @@ import Card from 'react-bootstrap/Card';
 import Data from '../../Data.json';
 import { usePaystackPayment } from 'react-paystack';
 import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button'
 
 const Detailed = () => {
 	const [email,setEmail]=useState("")
@@ -51,14 +52,14 @@ const navigate = useNavigate()
     const initializePayment = usePaystackPayment(config);
     return (
       <div>
-        <button
+        <Button
           onClick={() => {
             initializePayment(onSuccess, onClose);
           }}
-          className="btn  me-2 d-flex justify-content-center"
+          className=" mt-1 " variant='light' style={{fontSize:'16px',backgroundColor:'#FFB62A'}}
         >
           <div classname="wowxx">Start Purchase</div>
-        </button>
+        </Button>
       </div>
     );
   };

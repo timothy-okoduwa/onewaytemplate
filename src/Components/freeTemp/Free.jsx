@@ -57,16 +57,18 @@ const Free = () => {
 Data?.map((props)=>(
 	<div className="col-12 col-md-4 col-lg-3 mb-5">
 	<Link className="product-item" key={props.id} to={`/freed/${props.id1}`} >	
-		<img
+  <div className='flexx'>
+  <img
 		src={props.thumbnail}
 		alt=""
-		className="img-fluid product-thumbnail"
+		className=" product-thumbnail2"
+    style={{width:'100%'}}
 	  />
 	  <div className="lux">
-		<div className="product-title">{props.name}</div>
-		<div className="product-price">
+		<div className="product-title2">{props.name}</div>
+		<div className="product-price2">
 		  {' '}
-		   {props.price}
+		 {props.price}
 		</div>
 	  </div>
 	  <div className="worry">
@@ -77,6 +79,8 @@ Data?.map((props)=>(
 		  <img src={x} alt="" className="px-3" />
 		</div>
 	  </div>
+
+  </div>
 	</Link>
   </div>
 ))
