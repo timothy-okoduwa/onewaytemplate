@@ -23,7 +23,7 @@ const NavBar = () => {
           <Nav className="me-auto">
             <StyledLink to='./' className=' mx-3 '> Home</StyledLink>
          
-     <StyledLink2 to='/free'  className=' mx-3 '>Free Template </StyledLink2>
+     <StyledLink2 to='/free'  className=' mx-3 '>Free Template <div ></div> </StyledLink2>
           </Nav>
         </Navbar.Collapse>
       </Container>
@@ -41,21 +41,27 @@ font-size: 20px;
  text-decoration: none;
  color: #6F6E79;
      &.active {
-         
+      /* background-color:  #FFB62A; */
           color: #ffffff;
   }
 `
 const StyledLink2 = styled(NavLink)`
 font-size: 20px;
  font-weight: 600; 
-
+ 
  width: 200px;
  cursor: pointer;
  font-family: 'Work Sans', sans-serif;
  text-decoration: none !important;
  color: #ffffff;
      &.active {
-         
+    div{
+      width: 140px;
+      height:6px;
+      background-color:#FFB62A;
+    }
+      height:10px;
+    
           color: #ffffff;
   }
 `
