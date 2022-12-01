@@ -55,7 +55,7 @@ if (error) return <p>Error :(</p>
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
+                        src={`https://wayback.up.railway.app${data.fbanner2.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -65,7 +65,7 @@ if (error) return <p>Error :(</p>
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center ">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
+                        src={`https://wayback.up.railway.app${data.fbanner3.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -74,7 +74,7 @@ if (error) return <p>Error :(</p>
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
+                        src={`https://wayback.up.railway.app${data.fbanner4.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -84,7 +84,7 @@ if (error) return <p>Error :(</p>
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center ">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
+                        src={`https://wayback.up.railway.app${data.fbanner5.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -93,7 +93,7 @@ if (error) return <p>Error :(</p>
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
+                        src={`https://wayback.up.railway.app${data.fbanner6.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -103,7 +103,7 @@ if (error) return <p>Error :(</p>
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center ">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
+                        src={`https://wayback.up.railway.app${data.fbanner7.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -112,7 +112,7 @@ if (error) return <p>Error :(</p>
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
+                        src={`https://wayback.up.railway.app${data.fbanner8.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
