@@ -2,14 +2,16 @@ import React from 'react';
 import Container from 'react-bootstrap/Container';
 import './Home.css';
 import { Link } from 'react-router-dom';
-// import g from './g1.png'
-import x from './xd.svg'
-import f from './figma.svg'
-// import {BsEnvelope} from 'react-icons/bs'
-// import {FaPaperPlane} from 'react-icons/fa'
-import Data from '../../Data.json'
-// import { Link } from "react-scroll";
+
+import useFetch from '../hooks/useFetch'
+
 const HomePage = () => {
+  const { loading, error, data } = useFetch('https://wayback.up.railway.app/paids')
+
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error :(</p>
+
+  console.log(data)
   return (
 
     <div>
@@ -58,12 +60,12 @@ const HomePage = () => {
 			
           <div className="row">
 { 
-Data?.map((props)=>(
+data.map((props)=>(
 	<div className="col-12 col-md-4 col-lg-3 mb-5 ">
-	<Link className="product-item" key={props.id} to={`/detailed/${props.id1}`} >	
+	<Link className="product-item"  to={`/detailed/${props.id}`} >	
   <div className='flexx'>
   <img
-		src={props.thumbnail}
+		src={`https://wayback.up.railway.app${props.sight.formats.large.url}`}
 		alt=""
 		className=" product-thumbnail2"
     style={{width:'100%'}}
@@ -77,11 +79,9 @@ Data?.map((props)=>(
 	  </div>
 	  <div className="worry">
 		<div>
-		  <img src={f} alt="" className="px-3" />
+		  <img src={`https://wayback.up.railway.app${props.compact.url}`} alt=""  />
 		</div>
-		<div>
-		  <img src={x} alt="" className="px-3" />
-		</div>
+	
 	  </div>
 
   </div>

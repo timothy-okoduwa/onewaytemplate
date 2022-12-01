@@ -5,11 +5,17 @@ import Container from 'react-bootstrap/Container';
 
 import { Link } from 'react-router-dom';
 
-import x from '../Home/xd.svg'
-import f from '../Home/figma.svg'
-import Data from '../../Free.json'
+
+
+import useFetch from '../hooks/useFetch'
 // import { Link } from "react-scroll";
 const Free = () => {
+  const { loading, error, data } = useFetch('https://wayback.up.railway.app/frees')
+
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error :(</p>
+
+  console.log(data)
   return (
     <div>
       {/* Start Hero Section */}
@@ -54,12 +60,12 @@ const Free = () => {
 			
           <div className="row">
 { 
-Data?.map((props)=>(
+data?.map((props)=>(
 	<div className="col-12 col-md-4 col-lg-3 mb-5">
-	<Link className="product-item" key={props.id} to={`/freed/${props.id1}`} >	
+	<Link className="product-item" key={props.id} to={`/freed/${props.id}`} >	
   <div className='flexx'>
   <img
-		src={props.thumbnail}
+		src={`https://wayback.up.railway.app${props.fsight.formats.large.url}`}
 		alt=""
 		className=" product-thumbnail2"
     style={{width:'100%'}}
@@ -73,10 +79,10 @@ Data?.map((props)=>(
 	  </div>
 	  <div className="worry">
 		<div>
-		  <img src={f} alt="" className="px-3" />
+		  <img src={`https://wayback.up.railway.app${props.fcompact.url}`} alt=""  />
 		</div>
 		<div>
-		  <img src={x} alt="" className="px-3" />
+		  <img src={props.both} alt="" className="px-3" />
 		</div>
 	  </div>
 

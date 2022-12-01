@@ -2,11 +2,15 @@ import React from 'react'
 import './ThankYou.css'
 // import g from './g1.png'
 import { useParams } from 'react-router-dom';
-import Data from '../../Data.json';
+import useFetch from '../hooks/useFetch'
 
 const ThankYou = () => {
     const { id } = useParams();
-    const render = Data[id - 1];
+    const { loading, error, data } = useFetch('https://wayback.up.railway.app/paids/' + id)
+  
+   
+    if (loading) return <p>Loading...</p>
+    if (error) return <p>Error :(</p>
   return (
     <div style={{'marginTop':'120px'}}>
 
@@ -21,11 +25,11 @@ const ThankYou = () => {
           </svg>
         </span> */}
                   <div className='turnss'>
-<img src={render.thumbnail} alt=""  style={{'width':"400px"}}/>
+<img src={`https://wayback.up.railway.app${data.sight.formats.large.url}`} alt=""  style={{'width':"400px"}}/>
           </div>
           <br/>
         <h2 className="display-3 text-black2">Thank you!</h2>
-        <p className="lead2 mb-2">We have verified your Payment for <strong style={{color:'#FFB62A'}}>{render.name}</strong> template</p>
+        <p className="lead2 mb-2">We have verified your Payment for <strong style={{color:'#FFB62A'}}>{data.name}</strong> template</p>
         <div className='imageholderr'>
 
         
@@ -35,7 +39,8 @@ const ThankYou = () => {
           <span id='write2'></span>
         </div>
         <p><span id='write3' className="emails"></span></p>
-         <a  href={render.url} target="_blank" rel="noreferrer" className="btn mt-2 me-2 " >Download Now</a>
+         <a  href={data.url} target="_blank" rel="noreferrer" className="btn mt-2 me-2 mb-3" >Download Now</a>
+  
       </div>
     </div>
   </div>

@@ -1,10 +1,14 @@
 import React from 'react'
 import '../Thankyou/ThankYou.css'
 import { useParams } from 'react-router-dom';
-import Data from '../../Free.json';
+import useFetch from '../hooks/useFetch'
 const Thankfree = () => {
-    const { id } = useParams();
-    const render = Data[id - 1];
+  const { id } = useParams();
+  const { loading, error, data } = useFetch('https://wayback.up.railway.app/frees/' + id)
+
+ 
+  if (loading) return <p>Loading...</p>
+  if (error) return <p>Error :(</p>
   return (
     <div style={{'marginTop':'120px'}}>
 
@@ -13,7 +17,7 @@ const Thankfree = () => {
         <div className="row">
           <div className="col-md-12 text-center pt-5">
           <div className='turnss'>
-    <img src={render.thumbnail} alt=""  style={{'width':"400px"}}/>
+    <img src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} alt=""  style={{'width':"400px"}}/>
 
               </div>
               <br/>
@@ -25,7 +29,7 @@ const Thankfree = () => {
             </span> */}
             <h2 className="display-3 text-black2">Thank you!</h2>
             <br/>
-            <p className="lead2 mb-2">Click on the download button to get <strong style={{color:'#FFB62A'}}>{render.name}</strong> template</p>
+            <p className="lead2 mb-2">Click on the download button to get <strong style={{color:'#FFB62A'}}>{data.name}</strong> template</p>
             <br/>
             <div className='imageholderr'>
      
@@ -36,7 +40,7 @@ const Thankfree = () => {
               <span id='write2'></span>
             </div>
             <p><span id='write3' className="emails"></span></p>
-             <a  href={render.url} target="_blank" rel="noreferrer" className="btn mt-2 me-2 " >Download Now</a>
+             <a  href={data.url} target="_blank" rel="noreferrer" className="btn mt-2 me-2 " >Download Now</a>
           </div>
         </div>
       </div>

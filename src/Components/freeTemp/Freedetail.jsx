@@ -1,21 +1,24 @@
 import React from 'react';
 import '../detailedPage/Detailed.css';
 
-import f from '../detailedPage/figma.svg';
+
 
 import { useParams,useNavigate } from 'react-router-dom';
 import Card from 'react-bootstrap/Card';
-import Data from '../../Free.json';
+import useFetch from '../hooks/useFetch'
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 
 const Freedetail = () => {
 
   const { id } = useParams();
-  const render = Data[id - 1];
+  const { loading, error, data } = useFetch('https://wayback.up.railway.app/frees/' + id)
+  
 const navigate = useNavigate()
+if (loading) return <p>Loading...</p>
+if (error) return <p>Error :(</p>
   const onSuccess = () => {
-    navigate(`/thankfree183636egndh03984*5^n/${render.id1}`);
+    navigate(`/thankfree183636egndh03984*5^n/${data.id}`);
   };
 
  
@@ -29,9 +32,9 @@ const navigate = useNavigate()
           <div className="aboutscreen">
             <div className="container ">
               <div className="gemu ">
-                <div className="gemu">{render.longname}</div>
+                <div className="gemu">{data.longname}</div>
               </div>
-              <div className="dist">{render.headerdist}</div>
+              <div className="dist">{data.headerdist}</div>
             </div>
           </div>
           <br />
@@ -43,7 +46,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center ">
                     <div>
                       <img
-                        src={render.banner1} 
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`} 
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -52,7 +55,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={render.banner2}
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -62,7 +65,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center ">
                     <div>
                       <img
-                        src={render.banner3}
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -71,7 +74,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={render.banner4}
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -81,7 +84,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center ">
                     <div>
                       <img
-                        src={render.banner5}
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -90,7 +93,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={render.banner6}
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -100,7 +103,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center ">
                     <div>
                       <img
-                        src={render.banner7}
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -109,7 +112,7 @@ const navigate = useNavigate()
                   <div className="col-12 mt-4 col-lg-11 d-flex justify-content-center">
                     <div>
                       <img
-                        src={render.banner8}
+                        src={`https://wayback.up.railway.app${data.fbanner1.formats.large.url}`}
                         alt=""
                         style={{ width: '100%' }}
                       />
@@ -119,16 +122,16 @@ const navigate = useNavigate()
               </div>
               <div className="nenvvd">
                 <Card style={{ width: '18rem', padding: '5px' }}>
-                  <Card.Img variant="top" src={render.thumbnail} style={{height:'200px'}} />
+                  <Card.Img variant="top" src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} style={{height:'200px'}} />
                   <Card.Body>
-                    <Card.Title style={{fontSize:'25px'}}>{render.name}</Card.Title>
+                    <Card.Title style={{fontSize:'25px'}}>{data.name}</Card.Title>
                     <Card.Text>
                       <div>
-                        ✓ {render.longname} <br />
+                        ✓ {data.longname} <br />
                         
                         <div className=" claa">
                           <strong>
-                            ✓ <span className="linethr">N</span> {render.price}{' '}
+                            ✓ <span className="linethr">N</span> {data.price}{' '}
                             <br />
                           </strong>
                         </div>
@@ -153,14 +156,14 @@ const navigate = useNavigate()
                 <strong>Overview</strong>
                 <br />
                 <br />
-                <div>{render.longdist}</div>
+                <div>{data.discription}</div>
                 <br />
                 <br />
                 <hr />
                 <strong>Compatibility</strong>
                 <br />
                 <div>
-                  <img src={f} alt="" />
+                  <img src={`https://wayback.up.railway.app${data.fcompact.url}`} alt="" />
                 </div>
                 <br />
                 <br />

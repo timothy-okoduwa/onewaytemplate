@@ -6,10 +6,18 @@
     
 }
 .logoname{
-    font-size: 32px;
+    font-size: 30px;
     font-weight: 600; 
     color: white !important; 
     font-family: 'Work Sans', sans-serif;
+}
+@media screen and (max-width:768px){
+    .logoname{
+        font-size: 20px;
+        font-weight: 600; 
+        color: white !important; 
+        font-family: 'Work Sans', sans-serif;
+    }
 }
 .dots{
     opacity: .4;
