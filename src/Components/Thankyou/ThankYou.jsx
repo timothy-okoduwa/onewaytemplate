@@ -25,7 +25,7 @@ const ThankYou = () => {
           </svg>
         </span> */}
                   <div className='turnss'>
-<img src={`https://wayback.up.railway.app${data.sight.formats.large.url}`} alt=""  style={{'width':"40%"}}/>
+<img src={`https://wayback.up.railway.app${data.sight.formats.large.url}`} alt=""  style={{'width':"100%"}}/>
           </div>
           <br/>
         <h2 className="display-3 text-black2">Thank you!</h2>
