@@ -26,7 +26,7 @@ const Free = () => {
             <div>
               <div className="intro-excerpt ">
                 <div className="figman">
-                  The Best Landing Page Design Inspiration, Templates and More.
+                  The Best Design Inspiration, Templates and More.
                 </div>
                 <div className=" doneck mt-4 mb-4 d-flex justify-content-center">
                   Get free templates you can use anytime, just pick and download and it's yours 

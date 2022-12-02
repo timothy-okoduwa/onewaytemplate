@@ -18,6 +18,28 @@
         color: white !important; 
         font-family: 'Work Sans', sans-serif;
     }
+    .Navss{
+        background-color: #0F0E1F ;
+        color: white ; 
+        
+        padding-bottom: 45px !important;
+        
+    }
+}
+@media screen and (max-width:991px){
+    .logoname{
+        font-size: 20px;
+        font-weight: 600; 
+        color: white !important; 
+        font-family: 'Work Sans', sans-serif;
+    }
+    .Navss{
+        background-color: #0F0E1F ;
+        color: white ; 
+        
+        padding-bottom: 45px !important;
+        
+    }
 }
 .dots{
     opacity: .4;

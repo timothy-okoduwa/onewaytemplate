@@ -22,7 +22,7 @@ if (error) return <p>Error :(</p>
     phone : name,
     amount: data.price * 100,
     publicKey: 'pk_live_dc0a46a8affdd06e7d7a9ce3bfd5c842c71d0511',
-    // publicKey: 'pk_test_89aaa353160cbf6c9c97b5efb14e4e0ff3f5f5eb',
+    
   };
   const onSuccess = (reference) => {
 

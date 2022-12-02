@@ -35,13 +35,10 @@
     display: flex;
     justify-content: center;
    }
-   .turnss{
-    /* background-color: red; */
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    object-fit: cover;
-    padding-bottom: 40px;
+ 
+   .jorro{
+   width:50%;
+   object-fit:cover;
    }
 
    @media screen and (max-width:768px){
@@ -54,4 +51,8 @@
         margin-bottom: 30px;
         color: #FFB62A;
       }
+      .jorro{
+        width:100%;
+        object-fit:cover;
+        }
    }

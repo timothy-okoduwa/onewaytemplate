@@ -8,7 +8,7 @@ import './NavBar.css'
 const NavBar = () => {
   return (
     <div>
- <Navbar  expand="lg" className='Navss fixed-top pb-5 '>
+ <Navbar  expand="lg" className='Navss fixed-top  '>
       <Container>
         <Navbar.Brand className="pushes">
           <Link to='/' style={{'textDecoration':'none'}}>

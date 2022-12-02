@@ -23,13 +23,11 @@ const HomePage = () => {
             <div>
               <div className="intro-excerpt ">
                 <div className="figman">
-                  The Best Landing Page Design Inspiration, Templates and More.
+                  The Best Design Inspiration, Templates and More.
                 </div>
                 <div className=" doneck mt-4 mb-4 d-flex justify-content-center">
-                  Donec vitae odio quis nisl dapibus malesuada. Nullam ac
-                  aliquet 
-                  velit. Aliquam vulputate velit imperdiet dolor tempor
-                  tristique.
+                Where exclusive designs meet designers, with different layout and 
+                asthetics, <br/> just click and you own it FOR LIFE 😉
                 </div>
                 <div className="tbutton">
           

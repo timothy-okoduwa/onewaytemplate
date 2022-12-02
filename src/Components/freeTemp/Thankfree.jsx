@@ -1,14 +1,18 @@
 import React from 'react'
 import '../Thankyou/ThankYou.css'
-import { useParams } from 'react-router-dom';
+import { useParams,useNavigate } from 'react-router-dom';
 import useFetch from '../hooks/useFetch'
 const Thankfree = () => {
   const { id } = useParams();
   const { loading, error, data } = useFetch('https://wayback.up.railway.app/frees/' + id)
-
+const navigate = useNavigate()
  
   if (loading) return <p>Loading...</p>
   if (error) return <p>Error :(</p>
+
+  const move = ()=>{
+    navigate('/free')
+  }
   return (
     <div style={{'marginTop':'120px'}}>
 
@@ -16,8 +20,8 @@ const Thankfree = () => {
         <div className="container mt-5">
         <div className="row">
           <div className="col-md-12 text-center pt-5">
-          <div className='turnss'>
-    <img src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} alt=""  style={{'width':"50%",objectFit:'cover'}}/>
+          <div className=''>
+    <img src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} alt=""  className='jorro'/>
 
               </div>
               <br/>
@@ -40,7 +44,7 @@ const Thankfree = () => {
               <span id='write2'></span>
             </div>
             <p><span id='write3' className="emails"></span></p>
-             <a  href={data.url} target="_blank" rel="noreferrer" className="btn mt-2 me-2 " >Download Now</a>
+             <a  href={data.url} target="_blank" rel="noreferrer" className="btn mt-2 me-2 " onClick={move} >Download Now</a>
           </div>
         </div>
       </div>

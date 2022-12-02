@@ -17,8 +17,8 @@ const Footer = () => {
 
 				<div className="row ">
 					<div className="col-12 col-lg-6">
-						<div className="mb-4 footer-logo-wrap"><span className="footer-logo">OnewayTemplate<span>.</span></span></div>
-						<p className="">Donec facilisis quam ut purus rutrum lobortis. Donec vitae odio quis nisl dapibus malesuada. Nullam ac aliquet velit. Aliquam vulputate velit imperdiet dolor tempor tristique. Pellentesque habitant</p>	
+						<div className="mb-3 footer-logo-wrap"><strong className="footer-logo">OnewayTemplate<span>.</span></strong></div>
+						<p className="">Inspired by the urge for perfection and convenience, now designers can get the job done with ease  </p>	
 					</div>
 
 				
