@@ -17,7 +17,7 @@ const Thankfree = () => {
         <div className="row">
           <div className="col-md-12 text-center pt-5">
           <div className='turnss'>
-    <img src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} alt=""  style={{'width':"400px"}}/>
+    <img src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} alt=""  style={{'width':"40%",}}/>
 
               </div>
               <br/>
