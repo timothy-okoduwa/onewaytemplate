@@ -8,7 +8,7 @@ import './NavBar.css'
 const NavBar = () => {
   return (
     <div>
- <Navbar  expand="lg" className='Navss fixed-top'>
+ <Navbar  expand="lg" className='Navss fixed-top pb-5 '>
       <Container>
         <Navbar.Brand className="pushes">
           <Link to='/' style={{'textDecoration':'none'}}>
@@ -21,9 +21,9 @@ const NavBar = () => {
         <Navbar.Toggle aria-controls="basic-navbar-nav" className='bg-light Toggg'/>
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="me-auto">
-            <StyledLink to='./' className=' mx-3 '> Home <div ></div></StyledLink>
+            <StyledLink to='./' className=' mx-3 mt-2 mb-3'> Home <div ></div></StyledLink>
              
-     <StyledLink2 to='./free'  className=' mx-3 '>Free Template <div ></div> </StyledLink2>
+     <StyledLink2 to='./free'  className=' mx-3 mt-2 '>Free Template <div ></div> </StyledLink2>
           </Nav>
         </Navbar.Collapse>
       </Container>
