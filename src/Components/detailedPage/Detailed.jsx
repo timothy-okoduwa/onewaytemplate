@@ -48,7 +48,8 @@ if (error) return <p>Error :(</p>
           onClick={() => {
             initializePayment(onSuccess, onClose);
           }}
-          className=" mt-1 " variant='light' style={{fontSize:'16px',backgroundColor:'#FFB62A'}}
+          className=" mt-1 btn " variant='light' style={{fontSize:'16px',backgroundColor:'#FFB62A'}}
+          disabled={!email || !name}
         >
           <div classname="wowxx">Start Purchase</div>
         </Button>

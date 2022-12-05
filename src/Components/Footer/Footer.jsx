@@ -25,17 +25,17 @@ const Footer = () => {
 					
 					<div className="col-12 col-lg-6">
 						<div className="subscription-form">
-							<h3 className="d-flex align-items-center"><span className="me-1"><BsEnvelope/></span><span>Subscribe to Newsletter</span></h3>
+							<h3 className="d-flex align-items-center"><span className="me-1"><BsEnvelope/></span><span>Subscribe to Newsletter <span className='soon'>(coming soon 😉)</span></span></h3>
 
 							<form  className="row g-3 mt-4">
 								<div className="col-auto">
-									<input type="text" className="form-control" placeholder="Enter your name"/>
+									<input type="text" className="form-control"  disabled placeholder="Enter your name" style={{cursor:'not-allowed'}}/>
 								</div>
 								<div className="col-auto">
-									<input type="email" className="form-control" placeholder="Enter your email"/>
+									<input type="email" className="form-control" disabled placeholder="Enter your email" style={{cursor:'not-allowed'}}/>
 								</div>
 								<div className="col-auto">
-									<button className="btn  me-2">
+									<button className="btn  me-2" disabled>
 										<FaPaperPlane/>
 									</button>
 								</div>

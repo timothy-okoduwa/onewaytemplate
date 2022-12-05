@@ -65,4 +65,7 @@
  color: #0F0E1F !important;
    }
 
- 
+   button:disabled {
+    cursor: not-allowed;
+    pointer-events: all !important;
+  }
