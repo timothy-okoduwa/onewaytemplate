@@ -122,7 +122,7 @@ if (error) return <p>Error :(</p>
               </div>
               <div className="nenvvd">
                 <Card style={{ width: '18rem', padding: '5px' }}>
-                  <Card.Img variant="top" src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} style={{height:'200px'}} />
+                  <Card.Img variant="top" src={`https://wayback.up.railway.app${data.fsight.formats.large.url}`} style={{height:'200px',objectFit:'cover'}} />
                   <Card.Body>
                     <Card.Title style={{fontSize:'25px'}}>{data.name}</Card.Title>
                     <Card.Text>
