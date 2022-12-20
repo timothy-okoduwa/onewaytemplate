@@ -66,7 +66,7 @@ data.map((props)=>(
 		src={`https://wayback.up.railway.app${props.sight.formats.large.url}`}
 		alt=""
 		className=" product-thumbnail2"
-    style={{width:'100%'}}
+    style={{width:'100%',height:'200px',objectFit:'cover'}}
 	  />
 	  <div className="lux">
 		<div className="product-title2">{props.name}</div>
