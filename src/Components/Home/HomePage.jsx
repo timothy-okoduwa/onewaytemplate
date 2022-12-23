@@ -66,21 +66,20 @@ data.map((props)=>(
 		src={`https://wayback.up.railway.app${props.sight.formats.large.url}`}
 		alt=""
 		className=" product-thumbnail2"
-    style={{width:'100%',height:'200px',objectFit:'cover'}}
+    // style={{width:'100%',height:'200px',objectFit:'cover'}}
 	  />
 	  <div className="lux">
 		<div className="product-title2">{props.name}</div>
-		<div className="product-price2">
+		
+	  </div>
+    <div className="product-price2">
 		  {' '}
 		  <span className="linethr">N</span> {props.price}
 		</div>
-	  </div>
-	  <div className="worry">
-		<div>
-		  <img src={`https://wayback.up.railway.app${props.compact.url}`} alt=""  />
+		<div className="worry">
+      <div className='types '>Web</div>
+      <div className='types mx-3'>Web</div>
 		</div>
-	
-	  </div>
 
   </div>
   

@@ -68,21 +68,24 @@ data?.map((props)=>(
 		src={`https://wayback.up.railway.app${props.fsight.formats.large.url}`}
 		alt=""
 		className=" product-thumbnail2"
-    style={{width:'100%',height:'200px',objectFit:'cover'}}
+    // style={{width:'100%',height:'300px',objectFit:'cover'}}
 	  />
 	  <div className="lux">
 		<div className="product-title2">{props.name}</div>
-		<div className="product-price2">
-		  {' '}
-		 {props.price}
-		</div>
+		
 	  </div>
-	  <div className="worry">
-		<div>
-		  <img src={`https://wayback.up.railway.app${props.fcompact.url}`} alt=""  />
+    <div className="product-price2">
+		  {' '}
+      {/* <div class="location-icon"></div> */}
+		 {/* {props.price} */}
+		</div>
+    
+	  <div >
+		<div className="worry">
+      <div className='types '>Web</div>
+      <div className='types mx-3'>Web</div>
 		</div>
 		<div>
-		  <img src={props.both} alt="" className="px-3" />
 		</div>
 	  </div>
 
@@ -92,6 +95,12 @@ data?.map((props)=>(
 ))
 }
           </div>
+
+
+
+
+
+
         </Container>
       </div>
 <br />

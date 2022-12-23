@@ -77,14 +77,14 @@ body{
                 cursor: pointer;
               }
 .product-thumbnail2{
-  padding-bottom: 10px;
-  border-radius: 8px 8px 0 0;
+  width: 300px;
+  height: 350px;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 .flexx{
-  background: rgba( 255, 255, 255, 0.25 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-  border: 1px solid rgba( 255, 255, 255, 0.18 );
+
   height:100%;
 padding: 10px;
 border-radius:8px ;
@@ -100,15 +100,16 @@ border-radius:8px ;
         font-family: 'Work Sans';
         /* background-color: rgb(0, 225, 255); */
         font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
+        font-weight: 600;
+        font-size: 20px;
         color: #ffffff !important;
-        
+        padding-top: 10px ;
       }
       .product-price2{
-        /* background: #FFF0D2; */
-        border-radius: 4px;
-        padding: 10px;
+       display: flex;
+      text-align: start;
+        padding-top: 10px ;
+        padding-bottom: 10px ;
         font-family: 'Work Sans';
       font-style: normal;
       font-weight: 500 !important;
@@ -117,14 +118,36 @@ border-radius:8px ;
       color: #ffffff;
       }
       .worry{
-        display: flex;
-        /* margin-left: 14px; */
+      display:flex;
       }
+.types{
+  background-color: hsla(0,0%,100%,.32);
+  /* padding: 5px; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: white;
+  /* font-weight: 600; */
+  font-family: 'Work Sans';
+  border-radius: 5px;
+  width: 70px;
+  height: 30px;
+}
 
 
 
-
-
+.location-icon {
+  width: 33px;
+  height: 28px;
+  margin-right: 10px;
+  border-radius: 3px;
+  background-color: #095dff;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTciIHZpZXdCb3g9IjAgMCAxNyAxNyIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iOC41IiBjeT0iOC41IiByPSI0LjUiIGZpbGw9IndoaXRlIi8+CjxjaXJjbGUgY3g9IjguNSIgY3k9IjguNSIgcj0iOCIgc3Ryb2tlPSJ3aGl0ZSIvPgo8L3N2Zz4K);
+  background-position: 50% 50%;
+  background-size: 50%;
+  background-repeat: no-repeat;
+}
 
 
 
